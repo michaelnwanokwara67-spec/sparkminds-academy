@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery - Sparkminds Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* reuse styles from homepage, with adjustments */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(145deg, #f9f7f3 0%, #f0e9da 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 60px;
+            padding: 40px;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            border: 4px solid white;
+            outline: 3px solid #FFD166;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #118AB2;
+            text-shadow: 3px 3px 0 #FFD166;
+            margin-bottom: 30px;
+        }
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .topic-card {
+            background: #FFD166;
+            border-radius: 40px;
+            padding: 25px 10px;
+            color: #073b4c;
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 8px 0 #e6b85c;
+            transition: 0.1s ease;
+        }
+        .topic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 0 #e6b85c;
+        }
+        .topic-card:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 0 #e6b85c;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 1.5rem;
+            color: #118AB2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐣 Nursery Topics</h1>
+        <div class="topic-grid">
+            <a href="alphabet/" class="topic-card">🔤 Alphabet</a>
+            <a href="#" class="topic-card">🔢 Numbers</a>
+            <a href="#" class="topic-card">🎨 Colors</a>
+            <a href="#" class="topic-card">🐘 Animals</a>
+        </div>
+        <a href="../index.html" class="back-link">← Back to classes</a>
+    </div>
+</body>
+</html>

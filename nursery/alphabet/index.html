@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet - Nursery - Sparkminds Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(145deg, #f9f7f3 0%, #f0e9da 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 60px;
+            padding: 40px;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            border: 4px solid white;
+            outline: 3px solid #FFD166;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #118AB2;
+            text-shadow: 3px 3px 0 #FFD166;
+            margin-bottom: 20px;
+        }
+        .video-box {
+            background: #06D6A0;
+            padding: 15px;
+            border-radius: 40px;
+            margin: 30px 0;
+            box-shadow: inset 0 -4px 0 #049e76;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            border-radius: 30px;
+            overflow: hidden;
+            background: black;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .letter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .letter-link {
+            background: #06D6A0;
+            border-radius: 25px;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 3px 3px 0 #118AB2;
+            box-shadow: 0 8px 0 #049e76;
+            cursor: pointer;
+            transition: 0.1s ease;
+            text-decoration: none;
+            display: block;
+        }
+        .letter-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 11px 0 #049e76;
+        }
+        .letter-link:active {
+            transform: translateY(5px);
+            box-shadow: 0 3px 0 #049e76;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #118AB2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔤 Alphabet (Nursery)</h1>
+        <p style="font-size: 1.5rem;">Watch the video, then click any letter to practice!</p>
+
+        <!-- Intro Video (covers all letters) -->
+        <div class="video-box">
+            <div class="video-wrapper">
+                <!-- Replace with your actual Google Drive video ID -->
+                <iframe src="https://drive.google.com/file/d/1WBjIz6X0gk4vJ926LsQ2m9kjyHLJabaY/preview" allow="autoplay"></iframe>
+            </div>
+        </div>
+
+        <!-- Letter Grid -->
+        <div class="letter-grid">
+            <!-- Generate A-Z links -->
+            <a href="a.html" class="letter-link">A</a>
+            <a href="b.html" class="letter-link">B</a>
+            <a href="c.html" class="letter-link">C</a>
+            <a href="d.html" class="letter-link">D</a>
+            <a href="e.html" class="letter-link">E</a>
+            <a href="f.html" class="letter-link">F</a>
+            <a href="g.html" class="letter-link">G</a>
+            <a href="h.html" class="letter-link">H</a>
+            <a href="i.html" class="letter-link">I</a>
+            <a href="j.html" class="letter-link">J</a>
+            <a href="k.html" class="letter-link">K</a>
+            <a href="l.html" class="letter-link">L</a>
+            <a href="m.html" class="letter-link">M</a>
+            <a href="n.html" class="letter-link">N</a>
+            <a href="o.html" class="letter-link">O</a>
+            <a href="p.html" class="letter-link">P</a>
+            <a href="q.html" class="letter-link">Q</a>
+            <a href="r.html" class="letter-link">R</a>
+            <a href="s.html" class="letter-link">S</a>
+            <a href="t.html" class="letter-link">T</a>
+            <a href="u.html" class="letter-link">U</a>
+            <a href="v.html" class="letter-link">V</a>
+            <a href="w.html" class="letter-link">W</a>
+            <a href="x.html" class="letter-link">X</a>
+            <a href="y.html" class="letter-link">Y</a>
+            <a href="z.html" class="letter-link">Z</a>
+        </div>
+
+        <a href="../" class="back-link">← Back to Nursery topics</a>
+    </div>
+</body>
+</html>

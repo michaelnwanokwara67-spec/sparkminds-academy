@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    text-align: center;
+    color: white;
+}
+
+.hero {
+    margin-top: 120px;
+}
+
+.main-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.main-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.card {
+    background: white;
+    color: black;
+    width: 220px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #4CAF50;
+    border-radius: 20px;
+}

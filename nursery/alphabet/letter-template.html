@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter <span id="letterTitle"></span> - Sparkminds Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Copy all the styles from the previous letter-a.html example */
+        /* ... (keep all styles from the <style> block in my previous message) ... */
+        /* Make sure to include .back-link styles etc. */
+    </style>
+</head>
+<body>
+    <div class="lesson-card">
+        <div class="header">
+            <h1>✨Sparkminds✨</h1>
+            <h2>Letter <span id="currentLetter">A</span></h2>
+        </div>
+
+        <div class="exercise">
+            <div class="question" id="questionText">Which picture starts with the letter <span id="letterInQuestion">A</span>?</div>
+            <div class="options" id="optionsContainer"></div>
+            <div id="feedback" class="feedback"></div>
+            <button id="nextLetter" class="next-btn" style="display: none;">Next Letter →</button>
+        </div>
+        <a href="index.html" class="back-link">← Back to alphabet</a>
+    </div>
+
+    <!-- Load the data file -->
+    <script src="letter-data.js"></script>
+    <script>
+        // Get the current letter from the URL? Or we will set it manually when creating pages.
+        // For the template, we will assume the letter is passed via a query parameter.
+        // But for simplicity, we will create separate files and set the letter manually.
+        // Let's do it by setting a variable at the top of each file.
+
+        // !!! IMPORTANT: For each letter page, you will change this ONE variable !!!
+        const currentLetter = 'A'; // CHANGE THIS for each page (e.g., 'B', 'C', etc.)
+
+        // Get data for this letter
+        const data = letterData[currentLetter];
+        
+        // Update page title and headings
+        document.getElementById('currentLetter').textContent = currentLetter;
+        document.getElementById('letterInQuestion').textContent = currentLetter;
+        document.title = `Letter ${currentLetter} - Sparkminds Academy`;
+
+        // Build the options (correct answer + two wrong ones)
+        const correctOption = `${data.emoji} ${data.word}`;
+        // Shuffle options so correct answer isn't always first
+        const options = [correctOption, ...data.wrongOptions];
+        for (let i = options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [options[i], options[j]] = [options[j], options[i]];
+        }
+
+        // Render options
+        const container = document.getElementById('optionsContainer');
+        container.innerHTML = '';
+        options.forEach((opt, index) => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.dataset.index = index;
+            btn.dataset.isCorrect = (opt === correctOption) ? 'true' : 'false';
+            btn.textContent = opt;
+            container.appendChild(btn);
+        });
+
+        // Add event listeners (similar to before, but using the new data attributes)
+        const feedbackDiv = document.getElementById('feedback');
+        const nextBtn = document.getElementById('nextLetter');
+        const optionButtons = document.querySelectorAll('.option-btn');
+
+        optionButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const isCorrect = e.target.dataset.isCorrect === 'true';
+                
+                if (isCorrect) {
+                    feedbackDiv.className = 'feedback correct';
+                    feedbackDiv.textContent = `✅ Perfect! ${data.word} starts with ${currentLetter}!`;
+                    nextBtn.style.display = 'block';
+                    optionButtons.forEach(b => b.disabled = true);
+                } else {
+                    feedbackDiv.className = 'feedback incorrect';
+                    feedbackDiv.textContent = '❌ Oops! Try again.';
+                    e.target.style.transform = 'translateX(5px)';
+                    setTimeout(() => e.target.style.transform = '', 200);
+                }
+            });
+        });
+
+        // Handle next button - go to next letter
+        nextBtn.addEventListener('click', () => {
+            const nextLetter = String.fromCharCode(currentLetter.charCodeAt(0) + 1);
+            if (nextLetter <= 'Z') {
+                window.location.href = `${nextLetter.toLowerCase()}.html`;
+            } else {
+                // Reached Z, go back to alphabet page
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkminds Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(145deg, #f9f7f3 0%, #f0e9da 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .home-card {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 60px;
+            padding: 40px;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            border: 4px solid white;
+            outline: 3px solid #FFD166;
+            text-align: center;
+        }
+        h1 {
+            font-size: 5rem;
+            color: #118AB2;
+            text-shadow: 5px 5px 0 #FFD166;
+            margin-bottom: 20px;
+        }
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .class-card {
+            background: #06D6A0;
+            border-radius: 40px;
+            padding: 30px 10px;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 10px 0 #049e76;
+            transition: 0.1s ease;
+        }
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 0 #049e76;
+        }
+        .class-card:active {
+            transform: translateY(5px);
+            box-shadow: 0 5px 0 #049e76;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-card">
+        <h1>✨Sparkminds✨</h1>
+        <p style="font-size: 2rem; color: #EF476F;">Choose your class</p>
+        <div class="class-grid">
+            <a href="nursery/" class="class-card">🐣 Nursery</a>
+            <a href="primary1/" class="class-card">📘 Primary 1</a>
+            <a href="primary2/" class="class-card">📗 Primary 2</a>
+            <a href="primary3/" class="class-card">📙 Primary 3</a>
+            <a href="primary4/" class="class-card">📕 Primary 4</a>
+            <a href="primary5/" class="class-card">📔 Primary 5</a>
+            <a href="primary6/" class="class-card">📒 Primary 6</a>
+        </div>
+    </div>
+</body>
+</html>
