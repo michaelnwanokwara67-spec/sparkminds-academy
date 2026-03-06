@@ -7,7 +7,7 @@ const letterData = {
     E: { word: "Egg", emoji: "🥚", wrongOptions: ["Fish 🐟", "Ball ⚽"] },
     F: { word: "Fish", emoji: "🐟", wrongOptions: ["Egg 🥚", "Cat 🐱"] },
     G: { word: "Girl", emoji: "👧", wrongOptions: ["Boy 👦", "Hat 🧢"] },
-    H: { word: "Hat", emoji: "🧢", wrongOptions: ["House 🏠", "Apple 🍎"] },
+    H: { word: "Hat", emoji: "🧢", wrongOptions: ["Cat 😺", "Apple 🍎"] },
     I: { word: "Igloo", emoji: "🏔️", wrongOptions: ["Jug 🏺", "Ball ⚽"] },
     J: { word: "Jug", emoji: "🏺", wrongOptions: ["Kite 🪁", "Cat 🐱"] },
     K: { word: "Kite", emoji: "🪁", wrongOptions: ["Lion 🦁", "Apple 🍎"] },
